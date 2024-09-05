@@ -50,26 +50,22 @@ body {
     align-items: center;
     gap: 1vw;
     position: fixed;
-  padding-top: 3vw !important;
     height: 8vh;
-    padding: 1vw;
 
+    width: 34vw;
+}
+
+
+.headerpart{
+    font-size: 1.2vw;
+font-weight: lighter;
+
+}
+
+#header :hover{
+    transition: 0.3s ease;
+    background-color:  #6d6d6d;
    
-}
-
-#logo {
-    font-size: 0.5vw; 
-  
-}
-#logo img {
-
-    height: 7vw;
-    width: 7vw;
-}
-
-#about, #about1, #about2 {
-    font-size: 1.4vw;
-    
 }
 
 
@@ -96,50 +92,241 @@ body {
   }
   
 
-
+  /*#logo {
+    height: 3.4vw;
+    width: 3.4vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2vh;
+    }
+    
+    #logo img {
+    
+        height: 3.1vw;
+        width: 3.1vw;
+    }
 
 
 
 #left-header {
     position: absolute;
-    left: 1.6vw; /* Adjust this value as needed */
+    left: 1.6vw;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Space between icons */
-    padding-top: 16vh;
-  
+
+    gap: 15px; 
+    
+  background-color: aqua;
 }
 
 #left-header i {
-    font-size: 2.5vw;
+    font-size: 2.0vw;
     border-top:  2px solid rgba(194, 22, 22, 0.771);
+} */
+
+
+  #logo {
+    height: 4.2vw;
+    width: 4vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2vh;
+    }
+    
+    #logo img {
+    
+        height: 3.6vw;
+        width: 3.5vw;
+    }
+
+#icons{
+    height: 12vw;
+    width: 4vw;
+    display: flex;
+    flex-direction: column;  /* Aligns items vertically */
+    position: fixed;         /* Keeps the menu in place as you scroll */
+    left: 0;                 /* Aligns it to the left edge of the page */
+                /* Starts from the top of the page */
+      /* Makes the menu span the full height of the page */
+
+
+  /*  background-color: #27ae60;*/
 }
-#left-content {
+
+
+
+ .icon1{
+height:3vw ;
+width: 4vw;
+background-color: #000000;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#icons :hover{
+    transition: 0.3s ease;
+    background-color:  #222222;
+    color: white;
+}
+
+#icons :active{
+    transition: 0.5s ease;
+    background-color:  #ffffff;
+    color: rgb(45, 45, 45);
+}
+
+
+.icon1 a{
+    font-size: 4vh;
+text-decoration: none;
+color: white;
+
+}
+
+
+.iconline{
+    height: 0.1vh;
+    width: 4vw;
+ /*background-color: rgb(32, 206, 245);*/
+    display: flex;
+    justify-content: center;
+}
+
+
+.iconline2 .line{
+    width:  0.1vh;
+height: 2vw;
+    background-color: #ffffff;
+}
+
+
+
+.iconline2{
+    width:  0.1vh;
+    height: 4vw;
+
+    
+    align-content: center;
+
+}
+
+
+.iconline .line{
+    height: 0.1vh;
+    width: 2vw;
+    background-color: #222222;
+}
+
+
+
+
+
+
+
+
+
+.left-content {
     text-align: center;
-   padding: 8vw;
+    padding: 20px;
+     opacity: 1;
+   
+}
+
+#left-content h1{
+    font-size: 7vh;
+}
+
+#left-content .vline-box{
+    display: flex;
+    
+
+}
+
+#left-content .vline-box .vline{
+    background-color: white;
+    height: 10vh;
+    width: 0.2vw;
+
+}
+#left-content .vline-box .vline-content{
+    font-size: 4vh;
+  
+padding-left: 2vh;
+}
+.hline-box{
     display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    
+}         
+
+.hline{
+    height: 0.2vh;
+    width: 2vw;
+    background-color: white;
+padding-right: 2vh;
+}
+
+.hline-box p{
+    background-color: #27ae60;
+    height:3vh ;
+    width:25vw;
+    font-size: 3vh;
+
+}
+
+
+
+
+.social{
+    margin-top: auto;
+ display: flex;
+flex-wrap: wrap;
 
 
 }
 
-#left-content h1 {
-    font-size: 3vw;
-    margin-bottom: 10px;
+
+.social a{
+    text-decoration: none;
+    padding:0.6vh;
+    background-color: #ffffff;
+    margin: 4px;
+   display: flex;
+   justify-content: center;
+
 }
 
-#left-content h3 {
-    font-size: 1.8vw;
-    margin-bottom: 20px;
+
+
+.social a i{
+    font-size:3.2vh;
+    color:black;
+    opacity: 0.9;
+
 }
 
-#left-content p {
-    font-size: 1.2vw;
+#left-part{
+    padding-left: 10vh;
+    padding-right: 15vh;
 }
+
+.mid-line{
+    background-color:white ;
+    height: 50vh;
+    width: 0.1vw;
+
+}
+
+
+
+
 
 
 
@@ -148,10 +335,10 @@ body {
     height: 65vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-right: 4px;
     flex-direction: column;
-    padding-top: 5vh;
-    padding-left: 2vw;
+padding-top: 5vh;
+    padding-left: 0vw;
     margin-top: 15vh;
   }
   
@@ -168,12 +355,12 @@ body {
   .slide {
     width: 45vw;
     height: 80vh;
-    display: flex;
-    justify-content: center;
+
     align-items: center;
     /* background-color: #fafde3; */
     color: var(--dark);
- padding: 1vw;
+ padding:0.5vw;
+ 
     font-weight: 600;
     position: absolute;
     top: 0;
@@ -186,8 +373,7 @@ body {
 
   
 #terminal {
-    background-color: #000000;
-    border-radius: 10px;
+    background-color: rgba(17, 17, 17, 0.98);
     padding: 20px;
     width: 100%;
     max-width: 800px;
@@ -208,7 +394,10 @@ body {
 }
 
 #prompt {
-    margin-right: 10px;
+
+  font-family: "Courier New", Courier, monospace;
+font-size: 18px;
+  color: #ddd;
 }
 
 #command-input {
@@ -221,3 +410,118 @@ body {
     font-size: 1rem;
 }
   
+.slide2{
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+
+.about h3{
+
+        display: inline-block; /* Ensure the underline is only as long as the text */
+        border-bottom: 8px solid rgba(255, 255, 255, .2); /* Create a gray underline */
+        padding-bottom: 2px; /* Optional: Adds some space between the text and the underline */
+    
+    font-size: 25px;
+}
+
+
+.heading{
+    display: flex;
+}
+
+
+ .hline2{
+    background-color: #27ae60;
+    height: 0.2vh;
+    width: 7.5vh;
+    margin-top: 4.5vh;
+    margin-right: 1vh;
+ }
+.heading h4{
+    color: #27ae60;
+    padding-top: 3vh;
+    padding-bottom: 3.5vh;
+    font-family: opensans;
+    text-transform: uppercase;
+    font-size: 3vh;
+}
+
+
+.heading :hover{
+    color: white;
+    transition: 0.3s ease;
+
+    
+}
+
+.hline2 :hover{
+    color: white;
+    transition: 0.3s ease;
+}
+
+
+
+.des p{
+font-size: 2.5vh;
+flex-wrap: wrap;
+font-family: opensans;
+color: white;
+font-weight:normal;
+}
+
+#button3 button{
+ height: 7vh;
+ width: 15vw;
+border-radius: 6vh;
+background-color: #27ae60;
+color:white;
+font-size: 2.3vh;
+border: none;
+
+}
+
+
+.slide3box{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.leftlist ul li {
+text-align: left;
+line-height: 1.5;
+}
+
+
+
+.rightlist ul {
+    line-height: 1.5;
+text-align: right;
+list-style: none;
+
+}
+
+.bold{
+    color: white;
+    font-size: 4vh;
+    padding-top: 3vh;
+    font-weight:bold;
+}
+
+.under a{
+    color: white;
+    font-size: 2.5vh;
+    font-weight: normal;
+    text-decoration: none;
+    font-family :opensans;
+}
+
+.under :hover{
+    color: #27ae60;
+}
+
+
+.about i{
+    font-size:3vh;
+    font-weight: normal;
+}
