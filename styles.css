@@ -62,9 +62,9 @@ font-weight: lighter;
 
 }
 
-#header :hover{
+#header .headerpart :hover{
     transition: 0.3s ease;
-    background-color:  #6d6d6d;
+    background-color:  #ce1010;
    
 }
 
@@ -145,15 +145,13 @@ font-weight: lighter;
         width: 3.5vw;
     }
 
-#icons{
+#leftbar{
     height: 12vw;
     width: 4vw;
     display: flex;
-    flex-direction: column;  /* Aligns items vertically */
-    position: fixed;         /* Keeps the menu in place as you scroll */
-    left: 0;                 /* Aligns it to the left edge of the page */
-                /* Starts from the top of the page */
-      /* Makes the menu span the full height of the page */
+    flex-direction: column; 
+    position: fixed;      
+    left: 0;             
 
 
   /*  background-color: #27ae60;*/
@@ -170,13 +168,13 @@ justify-content: center;
 align-items: center;
 }
 
-#icons :hover{
+#leftbar :hover{
     transition: 0.3s ease;
     background-color:  #222222;
     color: white;
 }
 
-#icons :active{
+#leftbar :active{
     transition: 0.5s ease;
     background-color:  #ffffff;
     color: rgb(45, 45, 45);
@@ -300,6 +298,13 @@ flex-wrap: wrap;
     margin: 4px;
    display: flex;
    justify-content: center;
+
+}
+
+
+.social a:hover{
+    transition:  0.2s ease;
+    background-color:rgb(217, 217, 255);
 
 }
 
@@ -525,3 +530,49 @@ list-style: none;
     font-size:3vh;
     font-weight: normal;
 }
+
+
+
+
+
+#rightbar {
+    position: absolute;
+    right: 2vh; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    display: flex;
+    flex-direction: column; 
+  }
+
+
+  .dot {
+    width: 10px; /* Initial size of the dots */
+    height: 10px;
+  
+    border-radius: 50%; /* Makes the dot circular */
+    margin: 15px 0; /* Space between each dot */
+    position: relative; /* Allows the dot to grow without shifting */
+    animation: shrink 0.3s forwards; /* Default shrink state */
+  }
+  
+  .dot:hover {
+    animation: grow 0.3s forwards; /* Grow when hovered */
+  }
+  
+  @keyframes grow {
+    0% {
+      transform: scale(1); /* Initial size */
+    }
+    100% {
+      transform: scale(1.5); /* Enlarged size */
+    }
+  }
+  
+  @keyframes shrink {
+    0% {
+      transform: scale(1.5); /* Enlarged size */
+    }
+    100% {
+      transform: scale(1); /* Back to initial size */
+    }
+  }
