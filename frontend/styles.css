@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #010001; 
+    background-color: #000000; 
 }
 
 * {
@@ -78,7 +78,9 @@ font-weight: lighter;
     width: 100%;
     height: 100%;
     display: flex;
-    flex-wrap: nowrap;
+
+    justify-content: space-evenly ;
+
   }
   
   .left {
@@ -330,61 +332,89 @@ flex-wrap: wrap;
 }
 
 
-
-
-
-
-
-  .right {
-    width: 55vw;
-    height: 65vh;
+.right {
+    width: 40vw;
+    height: 90vh;
     display: flex;
     align-items: center;
-    margin-right: 4px;
     flex-direction: column;
-padding-top: 5vh;
-    padding-left: 0vw;
-    margin-top: 15vh;
-  }
   
-  .slides {
+
+}
+
+.slides {
     width: 100%;
-    flex-grow: 1;
-    overflow: hidden;
+    height: 50%;
     position: relative;
- 
-  }
+   
+}
 
-
-  
-  .slide {
-    width: 45vw;
-    height: 80vh;
-
+.section {
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    /* background-color: #fafde3; */
-    color: var(--dark);
- padding:0.5vw;
+    height: 80vh;
+    position: relative;
+    width: 50vw;
  
-    font-weight: 600;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: black;
-    padding-bottom: 22vh;
-  
 
-  }
+}
+
+/* Different background colors for the sections */
+#section1 {
+     background-color: rgb(0, 0, 0);
+   width: 100%;
+     /* align-items: center;
+     justify-content: center; */
+ 
+ 
+}
+
+#section2 {
+    background-color: #000000;
+}
+
+#section3 {
+    background-color: #000000;
+}
+#section4 {
+    background-color: #000000;
+}
+
+/* Popup Styling */
+.popup {
+    display: none;
+    position: absolute;
+  
+    transform: translate(-50%, -50%) scale(0.8); /* Initially scaled down */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Initially hidden */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth animation */
+}
+
+.show-popup {
+    display: block;
+    transform: translate(-50%, -50%) scale(1); /* Scaled up to normal */
+    opacity: 1; /* Fade-in effect */
+}
+
+
 
   
 #terminal {
-    background-color: rgba(17, 17, 17, 0.98);
-    padding: 20px;
-    width: 100%;
-    max-width: 800px;
-    height: 100%;
-    overflow-y: auto;
-    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+    background-color: rgba(28, 28, 28, 0.98);
+    padding: 2vh;
+    width: 50vw;
+    
+    height: 50%;
+ 
+
     color: white;
 }
 
@@ -416,8 +446,26 @@ font-size: 18px;
 }
   
 .slide2{
-    background-color: rgba(0, 0, 0, 0.5)
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2vh;
+    padding-left: 0vh;
+    padding-right: 0vh;
 }
+
+.slide3{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2vh;
+}
+.slide4{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2vh;
+    padding-left: 0vh;
+    padding-right: 0vh;
+}
+
+
+
+
 
 
 .about h3{
@@ -449,6 +497,7 @@ font-size: 18px;
     font-family: opensans;
     text-transform: uppercase;
     font-size: 3vh;
+    text-align: left;
 }
 
 
@@ -467,6 +516,7 @@ font-size: 18px;
 
 
 .des p{
+    text-align: left;
 font-size: 2.5vh;
 flex-wrap: wrap;
 font-family: opensans;
@@ -497,7 +547,9 @@ text-align: left;
 line-height: 1.5;
 }
 
-
+.leftlist ul{
+    list-style: none;
+}
 
 .rightlist ul {
     line-height: 1.5;
@@ -535,16 +587,6 @@ list-style: none;
 
 
 
-#rightbar {
-    position: absolute;
-    right: 2vh; 
-    top: 50%; 
-    transform: translateY(-50%); 
-    display: flex;
-    flex-direction: column; 
-  }
-
-
   .dot {
     width: 10px; /* Initial size of the dots */
     height: 10px;
@@ -576,3 +618,6 @@ list-style: none;
       transform: scale(1); /* Back to initial size */
     }
   }
+
+
+

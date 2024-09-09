@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ecperiment.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
     rel="stylesheet"
@@ -106,49 +106,55 @@ rel="stylesheet"/>
       </div>
       <div class="right">
         <div class="slides">
-            <div class="slide gradient-green">
-                <div id="terminal">
-                    <div id="output"></div>
-                    <div id="input-line">
-                        <span id="prompt">
-                           this i a user name o faryan rohit  user@machine:~$</span>
-                        <input type="text" id="command-input" autofocus autocomplete="off">
+            <!-- Section 1 -->
+            <div class="section" id="section1">
+                <div class="slide gradient-green">
+                    <div id="terminal">
+                        <div id="output"></div>
+                        <div id="input-line">
+                            <span id="prompt">
+                               this i a user name o faryan rohit  user@machine:~$</span>
+                            <input type="text" id="command-input" autofocus autocomplete="off">
+                        </div>
                     </div>
                 </div>
-            </div>
-
-
-<!--slide2-->
-            <div class="slide gradient-blue">
-<div class="slide2">
-            <div class="about">
-                <h3>ABOUT ME</h3>               <i class="ri-chat-1-line"></i>
-            </div>
-          <div class="heading">
-            <div class="hline2"></div>  
-            <h4>"Security involves a different way of looking at problems that no one’s thought of"
-            
-            </h4>
-          </div>
-<div class="des">
-<p>Passionate about computer security since my youth, it has continued to grow over the years, transforming this passion into a career.<br>
-
-    An open-source enthusiast, blockchain developer, and cybersecurity researcher with an interest in IoT devices, I enjoy reversing programs, finding bugs, and understanding the logic of other developers' code, which represents new ways of thinking for me. I also love coding and always strive to write elegant and efficient code, whether it's in Rust, Python, or JavaScript.
-    <br>
-    When I'm not writing code that breaks codes, you'll find me playing table tennis in the neighborhood, creating innovative projects with my 3D printer, or exploring new areas in Japan.</p>
-<br>
-
-</div>
-</div>
-
-
-            </div>
-<!--slide2 end-->
-
-<!--slide3-->
-
-            <div class="slide gradient-red">
     
+                <div class="popup">Welcome to Slide 1!</div>
+            </div>
+    
+            <!-- Section 2 -->
+            <div class="section" id="section2">
+               
+               
+                    <div class="slide2">
+                                <div class="about">
+                                    <h3>ABOUT ME</h3>               <i class="ri-chat-1-line"></i>
+                                </div>
+                              <div class="heading">
+                                <div class="hline2"></div>  
+                                <h4>"Security involves a different way of looking at problems that no one’s thought of"
+                                
+                                </h4>
+                              </div>
+                    <div class="des">
+                    <p>Passionate about computer security since my youth, it has continued to grow over the years, transforming this passion into a career.<br>
+                    
+                        An open-source enthusiast, blockchain developer, and cybersecurity researcher with an interest in IoT devices, I enjoy reversing programs, finding bugs, and understanding the logic of other developers' code, which represents new ways of thinking for me. I also love coding and always strive to write elegant and efficient code, whether it's in Rust, Python, or JavaScript.
+                        <br>
+                        When I'm not writing code that breaks codes, you'll find me playing table tennis in the neighborhood, creating innovative projects with my 3D printer, or exploring new areas in Japan.</p>
+                    <br>
+                    
+                    </div>
+                  
+                    
+                    
+                                </div>
+
+                <div class="popup">Welcome to Slide 2!</div>
+            </div>
+    
+            <!-- Section 3 -->
+            <div class="section" id="section3">
                 <div class="slide3">
                     <div class="about">
                         <h3>MY BLOG</h3>          <i class="ri-braces-line"></i>
@@ -167,18 +173,12 @@ rel="stylesheet"/>
         
         </div>
         </div>
-        
-<div id="button3">
-<button>Read More Articles!</button>
-</div>
-
+                <div class="popup">Welcome to Slide 3!</div>
             </div>
-            <!--slide3 end-->
 
-
-            <!--slide4-->
-            <div class="slide gradient-yellow">
-                <div class="slide3">
+<!--section4-->
+            <div class="section" id="section4">
+                <div class="slide4">
                     <div class="about">
                         <h3>LET'S KEEP IN TOUCH</h3>          <i class="ri-telegram-2-line"></i>
                     </div>
@@ -221,33 +221,37 @@ rel="stylesheet"/>
 
 
                 </div>
+              
             </div>
-            <!--slide4 end-->
         </div>
     </div>
     
-<!--right div end-->  
 
-
-
-<div  id="rightbar">
-
-
-<ul>
-<li class="dot"><a href="#"></a></li>
-<li class="dot"><a href="#"></a></li>
-<li class="dot"><a href="#"></a></li>
-<li class="dot"><a href="#"></a></li>
-</ul>
-
-</div>
-
-
-
-
-
-
-
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initializing fullPage.js
+        new fullpage('.slides', {
+            autoScrolling: true,
+            scrollHorizontally: true,
+            navigation: true, // Add navigation dots on the right
+            afterLoad: function(origin, destination, direction) {
+                const currentSection = destination.item;
+                const popup = currentSection.querySelector('.popup');
+    
+                if (popup) {
+                    // Show the popup
+                    popup.classList.add('show-popup');
+                    
+                    // Hide the popup after 3 seconds
+                    setTimeout(() => {
+                        popup.classList.remove('show-popup');
+                    }, 3000);
+                }
+            }
+        });
+    });
+    </script>
 
  </div>
  <!--div container-->
@@ -255,18 +259,15 @@ rel="stylesheet"/>
   <!--div wrapper end-->
 
 
-
-
-
-
     </div>
 <!--main div end-->
 
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 
     <script src="./script.js"></script>
