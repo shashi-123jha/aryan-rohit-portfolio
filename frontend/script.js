@@ -55,3 +55,4 @@ document.getElementById('command-input').addEventListener('keydown', function(ev
         document.getElementById('terminal').scrollTop = document.getElementById('terminal').scrollHeight;
     }
 });
+
