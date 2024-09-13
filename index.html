@@ -65,7 +65,7 @@ rel="stylesheet"/>
 
             <div id="left-part">
             <div id="left-content">
-                <h1>SAMY YOUNSI</h1>
+                <h1>Aryan rohit</h1>
                 <div class="vline-box">
                 <div class="vline"><h1></h1></div>
                 <div class="vline-content">
@@ -113,13 +113,66 @@ rel="stylesheet"/>
                         <div id="output"></div>
                         <div id="input-line">
                             <span id="prompt">
-                               this i a user name o faryan rohit  user@machine:~$</span>
+                                root@Gladiator:</span>
                             <input type="text" id="command-input" autofocus autocomplete="off">
                         </div>
                     </div>
                 </div>
     
-                <div class="popup">Welcome to Slide 1!</div>
+                <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const terminal = document.getElementById('terminal');
+    const outputElement = document.getElementById('output');
+    const commandInput = document.getElementById('command-input');
+    
+    // Commands and their responses
+    const commands = {
+        help: "Available commands: help, whoami, about, clear",
+        whoami: "SAMY YOUNSI - Developer, Security Researcher",
+        about: "I am a passionate developer with a keen interest in security research...",
+        clear: ''
+    };
+
+    // Function to execute commands
+    function executeCommand(command) {
+        const output = document.createElement('div');
+        if (commands[command]) {
+            output.textContent = commands[command];
+        } else {
+            output.textContent = `Command not found: ${command}`;
+        }
+
+        // Append the result to the output area
+        outputElement.appendChild(output);
+        commandInput.value = ''; // Clear the input
+
+        // Handle clear command
+        if (command === 'clear') {
+            outputElement.innerHTML = ''; // Clear the terminal output
+        }
+
+        // Scroll the terminal to the bottom after adding output
+        terminal.scrollTop = terminal.scrollHeight;
+    }
+
+    // Handle input when Enter is pressed
+    commandInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            const command = commandInput.value.trim();
+            if (command) {
+                const newLine = document.createElement('div');
+                newLine.innerHTML = `<span id="prompt">user@machine:~$</span> ${command}`;
+                outputElement.appendChild(newLine); // Display the entered command in the terminal
+
+                executeCommand(command); // Process the command
+            }
+        }
+    });
+});
+
+
+                </script>
+             
             </div>
     
             <!-- Section 2 -->
@@ -150,7 +203,7 @@ rel="stylesheet"/>
                     
                                 </div>
 
-                <div class="popup">Welcome to Slide 2!</div>
+               
             </div>
     
             <!-- Section 3 -->
@@ -173,7 +226,7 @@ rel="stylesheet"/>
         
         </div>
         </div>
-                <div class="popup">Welcome to Slide 3!</div>
+                
             </div>
 
 <!--section4-->

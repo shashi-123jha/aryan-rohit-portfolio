@@ -411,8 +411,11 @@ flex-wrap: wrap;
     background-color: rgba(28, 28, 28, 0.98);
     padding: 2vh;
     width: 50vw;
-    
+    display: flex;
+    align-items:flex-start ;
+    justify-content: flex-start;
     height: 50%;
+    flex-direction: column;
  
 
     color: white;
