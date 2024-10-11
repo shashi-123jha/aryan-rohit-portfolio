@@ -263,14 +263,15 @@ padding-right: 2vh;
     height:3vh ;
     width:25vw;
     font-size: 3vh;
+    background-color: green;
 
 }
 
 .social{
-bottom: 0vh;
-margin-top: 15vh;
+
+margin-top: 10vh;
  display: flex;
-margin-right: 25vw;
+margin-right: 13vw;
 width: fit-content;
 
 
@@ -312,6 +313,108 @@ width: fit-content;
    height: fit-content;
 
 }
+
+#left-footer{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 10vw;
+ 
+}
+
+
+
+.scroll-footer {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    position: relative;
+    margin-top: 8vh;
+  }
+  
+  .scroll-text {
+    margin: 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+  }
+  
+  .scroll-text::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25px; /* Adjust to position the line */
+    width: 20px;
+    height: 1px;
+    background-color: white;
+    transform: translateY(-50%);
+  }
+  
+  .scroll-text:last-child::before {
+    left: auto;
+    right: -25px;
+  }
+  
+  .mouse-icon {
+    width: 30px;
+    height: 45px;
+    border: 2px solid white;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 2s infinite; /* Bounce animation */
+  }
+  
+  .wheel {
+    width: 5px;
+    height: 10px;
+    background-color: white;
+    border-radius: 3px;
+    animation: scroll 2s infinite;
+  }
+  
+  /* Keyframe animation for scroll effect */
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Bounce effect for the whole mouse */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Remove the bounce and scroll animations initially */
+  .mouse-icon, .wheel {
+    animation: none;
+  }
+  
+  /* Trigger the animations on hover */
+  .scroll-footer:hover .mouse-icon {
+    animation: bounce 2s infinite;
+  }
+  
+  .scroll-footer:hover .wheel {
+    animation: scroll 2s infinite;
+  }
+  
 
 #left-mid-partition{
 display: flex;
@@ -403,48 +506,67 @@ flex-direction: column !important;
 }
 
 
-
-  
-#terminal {
-    background-color: rgba(28, 28, 28, 0.98);
-    padding: 2vh;
-    width: 50vw;
-    display: flex;
-    align-items:flex-start ;
-    justify-content: flex-start;
-    height: 50%;
-    flex-direction: column;
- 
-
-    color: white;
-}
-
-#output {
-    white-space: pre-wrap;
-    margin-bottom: 10px;
-}
-
-#input-line {
-    display: flex;
-    align-items: center;
-}
-
-#prompt {
-
+.cli {
+  background-color: #1d1f21;
+  color: #c5c8c6;
   font-family: "Courier New", Courier, monospace;
-font-size: 18px;
-  color: #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  width: 99%;
+  height: 50%;
+  margin: 20px auto;
 }
 
-#command-input {
-    flex: 1;
-    background: none;
-    border: none;
-    color: #00ff00;
-    outline: none;
-    font-family: inherit;
-    font-size: 1rem;
+.cli-content {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-bottom: 10px;
 }
+
+.cli p {
+  margin: 5px 0;
+  color: #8f8f8f;
+}
+
+.cli-line {
+  display: flex;
+  align-items: center;
+}
+
+.cli-prompt {
+  color: #b5bd68;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#cli-input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #c5c8c6;
+  font-size: 16px;
+  width: 100%;
+  caret-color: #c5c8c6;
+}
+
+#cli-input::placeholder {
+  color: #8f8f8f;
+}
+
+.cli-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cli-content::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+.cli-content::-webkit-scrollbar-track {
+  background-color: #1d1f21;
+}
+
   
 .slide2{
     background-color: rgba(0, 0, 0, 0.5);

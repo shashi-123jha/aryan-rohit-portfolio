@@ -1,275 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="ecperiment.css">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
-
-<link
-href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-
-<!-- GSAP Core -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-<!-- ScrollTrigger Plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-    <div class="video-container">
-        <video autoplay muted loop id="background-video">
-            <source src="" type="video/mp4">
-        </video>
-        <!-- Your content here -->
+
+
+  <div class="container">
+    <div class="header">
+    <div class="logo">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+    class="feather feather-codepen"><path d="M16 4h2a2 2 0 0 1 2 2v12a2
+    2 0 0 1-2 2h-71-2-2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h212 2h7a2 2 0 0
+    1 2 2z"></path><line x1="8" y1="8" x2="8" y2="12"></line><line x1="16" y1="8" x2="16" y2="12"></line></svg>
     </div>
-    <div id="main">
-    
-
-  <div id="header">
-
-    <div id="logo"><img src="./naqwada-security-logo.png" alt=""></div>
-    <div class="headerpart" >About Me</div>
-    <div class="iconline2"><div class="line"> </div></div>
-    <div class="headerpart">Let's Keep In Touch </div>
-    <div class="iconline2"><div class="line"> </div></div>
-    <div class="headerpart">My Blog </div>
-
+    <div class="links">
+    <ul>
+    <li><a href="#">About Me |</a></li>
+    <li><a href="#">Let's Keep In Touch |</a></li>
+    <li><a href="#">My Blog</a></li>
+    </ul>
+    </div>
+    </div>
+    <div class="main">
+    <div class="profile">
+    <div class="name">
+    <h1>ARYAN ROHIT</h1>
+    <p>DEVELOPER, SECURITY RESEARCHER, BUG HUNTING</p>
+    </div>
+    <div class="hex">
+    <p>0x416e642043544620706c6179657221</p>
+    </div>
+    </div>
+    <div class="cli">
+    <div class="cli-content" id="terminal">
+    <p>Last login: 8/31/2024, 12:52:54 PM from 127.0.0.1</p>
+    <p>Type <strong>help</strong> to list the available commands.</p>
+    <div class="cli-line">
+    <span class="cli-prompt">root@Gladiator:~$</span>
+    <input type="text" id="cli-input" autofocus>
+    </div>
+    </div>
+    </div>
   </div>
+</div>
+  
 
-  <div class="wrapper">
-    <div class="container">
-      <div class="left gradient-purple">
+<style>
 
-        <div id="left">
+.cli {
+flex: 1;
+background-color: #1e1e1e;
+padding: 20px;
+border: 2px solid #333;
+color: #00ff00;
+font-family: 'Courier New', Courier, monospace;
+}
+.cli-content {
+white-space: pre-wrap;
+font-size: 1em;
+}
+.cli-line {
+display: flex;
+align-items: center;
+}
+.cli-prompt {
+color: #00ff00;
+margin-right: 5px;
+}
+#cli-input {
+background-color: transparent;
+border: none;
+color: #00ff00;
+font-family: inherit;
+font-size: inherit;
+outline: none;
+width: 100%;
+}
 
-         
-                
-                <div id="leftbar">   <!--left bar icons-->
-                    <div class="icon1"><a href="#"><i class="ri-expand-left-right-line"></i></a></div>
-                    <div class="iconline"><div class="line"> </div></div>
-                    <div class="icon1"><a href="#">   <i class="ri-chat-1-line"></i></a></div>
-                      <div class="iconline"><div class="line"> </div></div>
-                    <div class="icon1"><a href="#">    <i class="ri-braces-line"></i></a></div>
-                    <div class="iconline"><div class="line"> </div></div>
-                    <div class="icon1"><a href="#"><i class="ri-telegram-2-fill"></i></a></div>
-                    
-                
-            </div>
-
-
-            <div id="left-part">
-            <div id="left-content">
-                <h1>SAMY YOUNSI</h1>
-                <div class="vline-box">
-                <div class="vline"><h1></h1></div>
-                <div class="vline-content">
-                    <p>DEVELOPER,</p>
-                    <p>SECURITY RESEARCHER</p>
-                <div class="hline-box">
-                    <div class="hline"></div>
-                    <p>0x416e642043544620706c6179657221</p>
-                </div>
-                </div>
-            </div>
-            </div>
-    
+</style>
 
 
-            <div class="social">
-        
-                <a href="#">  <i class="ri-twitter-fill"></i> </a>
-                <a href=" #"> <i class="ri-youtube-fill"></i> </a> 
-                <a href="#"><i class="ri-bug-fill"></i></a> 
-                <a href="#"><i class="ri-box-3-fill"></i></a> 
-                <a href="#"><i class="ri-linkedin-fill"></i></a>
-                <a href="#"><i class="ri-github-fill"></i></a> 
-            
-            </div>
-            </div>
-
-        </div>  
-
-        <!--left-->
+<script>
 
 
-<div class="mid-line"></div>
+document.addEventListener('DOMContentLoaded', function () {
+    const terminal = document.getElementById('terminal');
+    const cliInput = document.getElementById('cli-input');
 
+    // Commands and their responses
+    const commands = {
+        help: "Available commands: help, whoami, about, clear",
+        whoami: "SAMY YOUNSI - Developer, Security Researcher",
+        about: "I am a passionate developer with a keen interest in security research...",
+        clear: ''
+    };
 
+    // Function to execute commands
+    function executeCommand(command) {
+        const output = document.createElement('p');
+        if (commands[command]) {
+            output.textContent = commands[command];
+        } else {
+            output.textContent = Command not found: ${command};
+        }
 
+        // Append output to terminal
+        terminal.insertBefore(output, cliInput.parentNode);
+        cliInput.value = '';
 
-      </div>
-      <div class="right">
-        <div class="slides">
-            <!-- Section 1 -->
-            <div class="section" id="section1">
-                <div class="slide gradient-green">
-                    <div id="terminal">
-                        <div id="output"></div>
-                        <div id="input-line">
-                            <span id="prompt">
-                               this i a user name o faryan rohit  user@machine:~$</span>
-                            <input type="text" id="command-input" autofocus autocomplete="off">
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="popup">Welcome to Slide 1!</div>
-            </div>
-    
-            <!-- Section 2 -->
-            <div class="section" id="section2">
-               
-               
-                    <div class="slide2">
-                                <div class="about">
-                                    <h3>ABOUT ME</h3>               <i class="ri-chat-1-line"></i>
-                                </div>
-                              <div class="heading">
-                                <div class="hline2"></div>  
-                                <h4>"Security involves a different way of looking at problems that no one’s thought of"
-                                
-                                </h4>
-                              </div>
-                    <div class="des">
-                    <p>Passionate about computer security since my youth, it has continued to grow over the years, transforming this passion into a career.<br>
-                    
-                        An open-source enthusiast, blockchain developer, and cybersecurity researcher with an interest in IoT devices, I enjoy reversing programs, finding bugs, and understanding the logic of other developers' code, which represents new ways of thinking for me. I also love coding and always strive to write elegant and efficient code, whether it's in Rust, Python, or JavaScript.
-                        <br>
-                        When I'm not writing code that breaks codes, you'll find me playing table tennis in the neighborhood, creating innovative projects with my 3D printer, or exploring new areas in Japan.</p>
-                    <br>
-                    
-                    </div>
-                  
-                    
-                    
-                                </div>
+        // Handle clear command
+        if (command === 'clear') {
+            terminal.innerHTML = ''; // Clear all content inside terminal
+            terminal.appendChild(cliInput.parentNode); // Re-append input line
+            terminal.style.minHeight = '300px'; // Maintain minimum height after clearing
+        }
+    }
 
-                <div class="popup">Welcome to Slide 2!</div>
-            </div>
-    
-            <!-- Section 3 -->
-            <div class="section" id="section3">
-                <div class="slide3">
-                    <div class="about">
-                        <h3>MY BLOG</h3>          <i class="ri-braces-line"></i>
-                    </div>
-                  <div class="heading">
-                    <div class="hline2"></div>
-                    <h4>LATEST POST
-                    
-                    </h4>
-                  </div>
-        <div class="des">
-        <p>Passionate about computer security since my youth, it has continued to grow over the years, transforming this passion into a career.<br>
-        
-            An open-source enthusiast, blockchain developer, and cybersecurity researcher with an interest in IoT devices, I enjoy reversing programs, finding bugs, and understanding the logic of other developers' code, which represents new ways of thinking for me. I also love coding and always strive to write elegant and efficient code, whether it's in Rust, Python, or JavaScript.
-        
-        
-        </div>
-        </div>
-                <div class="popup">Welcome to Slide 3!</div>
-            </div>
+    // Handle input when enter is pressed
+    cliInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            const command = cliInput.value.trim();
+            if (command) {
+                const newLine = document.createElement('div');
+                newLine.className = 'cli-line';
+                newLine.innerHTML = <span class="cli-prompt">root@nslabs:~$</span> ${command};
+                terminal.insertBefore(newLine, cliInput.parentNode);
 
-<!--section4-->
-            <div class="section" id="section4">
-                <div class="slide4">
-                    <div class="about">
-                        <h3>LET'S KEEP IN TOUCH</h3>          <i class="ri-telegram-2-line"></i>
-                    </div>
-         <div class="slide3box">
-            <div class="leftlist">
-            <ul>
-           
-                <li><div class="bold"><h5>EMAIL</h5></div>
-                    <div class="under"><a href="#" >someone@gmail.com</a></div></li>
-                    <li><div class="bold"><h5>ADDRESS</h5></div>
-                        <div class="under"><a href="#" >Tokyo, Japan</a></div></li>
-                        <li><div class="bold"><h5>PERSONAL PROJECTS</h5></div>
-                            <div class="under">
-                                <ul>
-                                    <li><a href=""#>Project 1.com </a></li>
-                                    <li><a href=""#>Project 2.com</a></li>
-                                    <li><a href=""#>Project 3.com</a></li>
-                                </ul>
-                            </div></li>
-                             
-            </ul>
-            </div>
-            <div class="rightlist">
-     <ul>
-        <li><div class="bold"><h5>GITLAB</h5></div>
-            <div class="under"><a href="#" >gitlab.com</a></div></li>
-            <li><div class="bold"><h5>LINKEDIN</h5></div>
-                <div class="under"><a href="#" >myprofile.com</a></div></li>
-                <li><div class="bold"><h5>TWITTER</h5></div>
-                    <div class="under"><a href="#" >myaccount.com</a></div></li>
-                    <li><div class="bold"><h5>YOUTUBE</h5></div>
-                        <div class="under"><a href="#" >mychannel.com</a></div></li>
-                 
-     </ul>
-            </div>
-         </div>
-
-
-
-
-
-                </div>
-              
-            </div>
-        </div>
-    </div>
-    
-
-    
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Initializing fullPage.js
-        new fullpage('.slides', {
-            autoScrolling: true,
-            scrollHorizontally: true,
-            navigation: true, // Add navigation dots on the right
-            afterLoad: function(origin, destination, direction) {
-                const currentSection = destination.item;
-                const popup = currentSection.querySelector('.popup');
-    
-                if (popup) {
-                    // Show the popup
-                    popup.classList.add('show-popup');
-                    
-                    // Hide the popup after 3 seconds
-                    setTimeout(() => {
-                        popup.classList.remove('show-popup');
-                    }, 3000);
-                }
+                executeCommand(command);
             }
-        });
+        }
     });
-    </script>
 
- </div>
- <!--div container-->
-  </div>
-  <!--div wrapper end-->
+    // Adding a blink effect to the cursor
+    const cursor = document.querySelector('.cursor');
+    setInterval(() => {
+        cursor.style.visibility = cursor.style.visibility === 'hidden' ? 'visible' : 'hidden';
+    }, 500);
+});
+</script>
 
-
-    </div>
-<!--main div end-->
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-
-    <script src="./script.js"></script>
 </body>
 </html>

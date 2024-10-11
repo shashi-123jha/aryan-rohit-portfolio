@@ -60,9 +60,7 @@ rel="stylesheet"/>
 
         <div id="left">
 
-         
-            
-
+  
 
 
             <div id="left-mid-partition">
@@ -103,6 +101,22 @@ rel="stylesheet"/>
                     <a href="https://github.com/aryan-mrrobot"><i class="ri-github-fill"></i></a> 
                 
                 </div>
+
+
+             <div id="scrollfooter">
+
+
+                <div class="scroll-footer">
+                    <span class="scroll-text">Scroll</span>
+                    <div class="mouse-icon">
+                      <div class="wheel"></div>
+                    </div>
+                    <span class="scroll-text">Down</span>
+                  </div>
+
+
+             </div>
+
             </div>
 
 
@@ -130,69 +144,19 @@ rel="stylesheet"/>
             <!-- Section 1 -->
             <div class="section" id="section1">
                 <div class="slide gradient-green">
-                    <div id="terminal">
-                        <div id="output"></div>
-                        <div id="input-line">
-                            <span id="prompt">
-                                root@Gladiator:</span>
-                            <input type="text" id="command-input" autofocus autocomplete="off">
+                    <div class="cli">
+                        <div class="cli-content" id="terminal">
+                        <p>Last login: 8/31/2024, 12:52:54 PM from 127.0.0.1</p>
+                        <p>Type <strong>help</strong> to list the available commands.</p>
+                        <div class="cli-line">
+                        <span class="cli-prompt">root@Gladiator:~$</span>
+                        <input type="text" id="cli-input" autofocus>
                         </div>
-                    </div>
+                        </div>
+                        </div>
                 </div>
     
-                <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const terminal = document.getElementById('terminal');
-    const outputElement = document.getElementById('output');
-    const commandInput = document.getElementById('command-input');
-    
-    // Commands and their responses
-    const commands = {
-        help: "Available commands: help, whoami, about, clear",
-        whoami: "SAMY YOUNSI - Developer, Security Researcher",
-        about: "I am a passionate developer with a keen interest in security research...",
-        clear: ''
-    };
-
-    // Function to execute commands
-    function executeCommand(command) {
-        const output = document.createElement('div');
-        if (commands[command]) {
-            output.textContent = commands[command];
-        } else {
-            output.textContent = `Command not found: ${command}`;
-        }
-
-        // Append the result to the output area
-        outputElement.appendChild(output);
-        commandInput.value = ''; // Clear the input
-
-        // Handle clear command
-        if (command === 'clear') {
-            outputElement.innerHTML = ''; // Clear the terminal output
-        }
-
-        // Scroll the terminal to the bottom after adding output
-        terminal.scrollTop = terminal.scrollHeight;
-    }
-
-    // Handle input when Enter is pressed
-    commandInput.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            const command = commandInput.value.trim();
-            if (command) {
-                const newLine = document.createElement('div');
-                newLine.innerHTML = `<span id="prompt">user@machine:~$</span> ${command}`;
-                outputElement.appendChild(newLine); // Display the entered command in the terminal
-
-                executeCommand(command); // Process the command
-            }
-        }
-    });
-});
-
-
-                </script>
+              
              
             </div>
     
@@ -346,6 +310,6 @@ document.addEventListener('DOMContentLoaded', function () {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
